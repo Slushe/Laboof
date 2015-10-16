@@ -1,5 +1,5 @@
 ## Interface: 11100
-## Title: Laboof v0.2
+## Title: Laboof v0.3
 ## Notes: Gayfish
 ## Dependencies:
 ## OptionalDeps: 

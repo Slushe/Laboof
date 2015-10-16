@@ -1,3 +1,9 @@
+local defaults = {
+	enabled = true
+}
+
+LaboofDB = LaboofDB or defaults;
+
 local catFacts = {
 	[1] = "The largest population of tigers in the world is in the USA. There are more captive tigers in the USA alone than there are wild tigers in the entire world.",
 	[2] = "A male tiger in India adopted a litter of orphaned cubs, taking on the role of ‘mother’. Wildlife officials said such behavior had never been observed before.",
@@ -245,6 +251,11 @@ function SlashCmdList.CATFACTS(msg, editbox)
 end
 
 local function eventHandler()
+	if event == "ADDON_LOADED" then
+		if LaboofDB == nil then
+			--LaboofDB = { enabled = true }
+		end
+	end
 	if LaboofDB.enabled then
 		if event == "CHAT_MSG_CHANNEL" then
 			if arg1 == "@catfacts" then
@@ -291,9 +302,6 @@ local function eventHandler()
 				end
 			end
 		end
-	end
-	if event == "ADDON_LOADED" then
-		LaboofDB = LaboofDB or { enabled = true }
 	end
 end
 
