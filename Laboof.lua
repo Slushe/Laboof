@@ -174,7 +174,7 @@ local curTime = 0;
 local status = "|cff0072ffCAT|cffffffffFacts: |r"
 
 local function printCatFacts(catFactsType, catFactsTarget)
-	SendChatMessage(catFacts[math.random(1,168)],catFactsType,nil,catFactsTarget);
+	SendChatMessage(catFacts[math.random(1,table.getn(catFacts))],catFactsType,nil,catFactsTarget);
 end
 
 local function printForMoreCatFacts(catFactsType, catFactsTarget)
