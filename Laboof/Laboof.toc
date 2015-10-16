@@ -1,0 +1,7 @@
+## Interface: 11100
+## Title: Laboof v0.2
+## Notes: Gayfish
+## Dependencies:
+## OptionalDeps: 
+## SavedVariables: LaboofDB
+Laboof.lua
